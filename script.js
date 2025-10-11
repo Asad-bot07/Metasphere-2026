@@ -66,7 +66,7 @@ const iemImages = document.querySelectorAll('#iem-carousel img');
 
   setInterval(showNextIemImage, 5000);
 
-const countdownDate = new Date("2025-12-15T09:00:00").getTime();
+const countdownDate = new Date("2026-08-21T09:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
