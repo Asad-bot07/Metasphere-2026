@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Style.css">
+    <link rel="stylesheet" href="Style.css">
     <title>MetaSphere 2026: Global Conference in Kolkata</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -14,8 +14,7 @@
             font-family: 'Inter', sans-serif;
             background-color: #FFFBF5;
             color: #1a202c;
-            overflow-x: hidden;
-            overflow-y: hidden;
+            overflow: hidden;
         }
         .btn-register {
             background-color: #F97316;
@@ -160,34 +159,35 @@
     </div>
 </div>
 
-<!-- Nav -->
-<div class="fixed top-0 left-0 right-0 z-30 shadow-lg">
-    <!-- Banner -->
-    <div>
-        <img src="Assets/002.jpg" alt="Conference Banner" class="w-full h-64 object-cover">
-    </div>
-
+    
     <!-- Nav -->
-    <header class="bg-black/20 backdrop-blur-lg py-3 px-4 sm:px-6">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center space-x-4">
-                <img src="/Assets/Logo.png" alt="MetaSphere Logo" class="h-16 w-auto">
-                <div>
-                    <h3 class="text-xl font-bold text-white">Metasphere 2026</h3>
-                    <h4 class="text-xs font-medium text-gray-200">Global Conference on Cloud Computing and MetaVerse</h4>
-                </div>
-            </div>
+    <header class=" top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg shadow-md relative">
+  <!-- Banner Section -->
+  <div class="relative">
+    <img src="Assets/002.jpg" alt="Conference Banner" class="w-full h- object-cover" />
+    <!-- Optional dark overlay for readability -->
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 py-3">
+    <!-- Logo -->
+    <div class="flex flex-col space-x-2">
+  <span class="text-lg sm:text-xl font-bold text-white">MetaSphere 2026</span>
+  <!-- <span class="text-xs text-white "> Global Conference on Cloud, Virtualization & Metaverse</span> -->
+</div>
+
 
     <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center ">
+    <div class="hidden md:flex items-center">
       <nav class="flex items-center space-x-5 text-sm font-medium">
         <a href="/index.html" class="text-white hover:text-orange-400 transition">Home</a>
 
         <!-- Authors Dropdown -->
         <div class="relative">
-          <button onclick="toggleDropdown('authorsDropdown')" class="text-white hover:text-orange-400 transition flex items-center">
-            Authors <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
+          <button onclick="toggleDropdown('authorsDropdown')" class="text-white hover:text-orange-400 flex items-center">
+            Authors
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
           </button>
           <div id="authorsDropdown" class="absolute mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
             <a href="/CallPapers.html" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Call For Papers</a>
@@ -197,13 +197,13 @@
         </div>
 
         <a href="/technical-programs.html" class="text-white hover:text-orange-400 transition">Technical Programs</a>
-        <!-- <a href="/gallery.html" class="text-white hover:text-orange-400 transition">Gallery</a> -->
         <a href="/registration.html" class="text-white hover:text-orange-400 transition">Registration</a>
 
         <!-- Committee Dropdown -->
         <div class="relative">
-          <button onclick="toggleDropdown('committeeDropdown')" class="text-white hover:text-orange-400 transition flex items-center">
-            Committee <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
+          <button onclick="toggleDropdown('committeeDropdown')" class="text-white hover:text-orange-400 flex items-center">
+            Committee
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
           </button>
           <div id="committeeDropdown" class="absolute mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
             <a href="/scientific-committee.html" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Scientific Committee</a>
@@ -225,7 +225,7 @@
 
     <!-- Mobile Hamburger -->
     <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-white hover:bg-orange-400">
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="4" x2="20" y1="12" y2="12"/>
         <line x1="4" x2="20" y1="6" y2="6"/>
         <line x1="4" x2="20" y1="18" y2="18"/>
@@ -234,12 +234,11 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="md:hidden hidden bg-black/50 text-white px-6 py-4 space-y-4">
+  <div id="mobileMenu" class="md:hidden hidden bg-black/70 text-white px-6 py-4 space-y-4">
     <a href="/index.html" class="block hover:text-orange-400">Home</a>
     <a href="/CallPapers.html" class="block hover:text-orange-400">Call for Papers</a>
     <a href="/PaperSubmit.html" class="block hover:text-orange-400">Paper Submission</a>
     <a href="/technical-programs.html" class="block hover:text-orange-400">Technical Programs</a>
-    <!-- <a href="#" class="block hover:text-orange-400">Gallery</a> -->
     <a href="/registration.html" class="block hover:text-orange-400">Registration</a>
     <a href="/scientific-committee.html" class="block hover:text-orange-400">Scientific Committee</a>
     <a href="/AdvisoryCommittee.html" class="block hover:text-orange-400">Advisory Committee</a>
@@ -250,9 +249,8 @@
     <a href="/registration.html" class="block bg-orange-500 text-center rounded-md py-2 text-sm font-semibold hover:bg-orange-600">Register Now</a>
   </div>
 </header>
-
     <!-- Hero Sec -->
-       <section class="relative pt-32 pb-20 sm:pt-25 sm:pb-24 overflow-hidden">
+       <section class="relative pt-25 pb-20 overflow-hidden">
             <div id="video-slideshow" class="absolute top-0 left-0 w-full h-full z-0">
                 <video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
                     <source src="/Assets/20784261-hd_1280_720_30fps.mp4" type="video/mp4">
@@ -294,7 +292,7 @@
                  <div class="mt-8 flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-xl text-gray-700">
                     <div class="flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                        <link>Indian Engineering & Management (IEM), Ashram, Kolkata, India</link>
+                        <span>Indian Engineering & Management (IEM), Ashram, Kolkata, India</span>
                     </div>
                 </div>
                 <p class="mt-4 text-2xl gradient-text font-bold">প্রযুক্তির ভবিষ্যৎ, বাংলার মাটিতে</p>
@@ -451,7 +449,7 @@
 
         <div class="grid lg:grid-cols-3 gap-8">
             <!-- Track 1 -->
-            <div class="flip-card" data-aos="fade-up">
+            <div class="flip-card bg-white shadow-black shadow-xl p-4 rounded " data-aos="fade-up" data-aos-duration="1000">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="text-6xl mb-4"></div>
@@ -472,7 +470,7 @@
             </div>
 
             <!-- Track 2 -->
-            <div class="flip-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="flip-card bg-white shadow-black shadow-xl p-4 rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="text-6xl mb-4"></div>
@@ -495,7 +493,7 @@
             </div>
 
             <!-- Track 3 -->
-            <div class="flip-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flip-card bg-white shadow-black shadow-xl p-4 rounded " data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                        <div class="text-6xl mb-4"></div>

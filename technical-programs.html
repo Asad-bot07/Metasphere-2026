@@ -27,27 +27,31 @@
 <body class="antialiased">
     <div class="main-container">
 
-<header class="bg-black/20 backdrop-blur-lg fixed top-0 left-0 right-0 z-30 py-3 px-4 sm:px-6">
-  <div class="max-w-7xl mx-auto flex justify-between items-center">
+<header class=" top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg shadow-md relative">
+  <!-- Banner Section -->
+  <div class="relative">
+    <img src="Assets/002.jpg" alt="Conference Banner" class="w-full h- object-cover" />
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 py-3">
     <!-- Logo -->
-    <div class="flex items-center space-x-2">
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="16" r="16" fill="#F97316"/>
-        <circle cx="16" cy="16" r="12" fill="white" fill-opacity="0.2"/>
-        <circle cx="16" cy="16" r="6" fill="white"/>
-      </svg>
-      <span class="text-xl font-bold text-white">MetaSphere 2026</span>
-    </div>
+    <div class="flex flex-col space-x-2">
+  <span class="text-lg sm:text-xl font-bold text-white">MetaSphere 2026</span>
+  <!-- <span class="text-xs text-white "> Global Conference on Cloud, Virtualization & Metaverse</span> -->
+</div>
+
 
     <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center ">
+    <div class="hidden md:flex items-center">
       <nav class="flex items-center space-x-5 text-sm font-medium">
         <a href="/index.html" class="text-white hover:text-orange-400 transition">Home</a>
 
         <!-- Authors Dropdown -->
         <div class="relative">
-          <button onclick="toggleDropdown('authorsDropdown')" class="text-white hover:text-orange-400 transition flex items-center">
-            Authors <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
+          <button onclick="toggleDropdown('authorsDropdown')" class="text-white hover:text-orange-400 flex items-center">
+            Authors
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
           </button>
           <div id="authorsDropdown" class="absolute mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
             <a href="/CallPapers.html" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Call For Papers</a>
@@ -57,13 +61,13 @@
         </div>
 
         <a href="/technical-programs.html" class="text-white hover:text-orange-400 transition">Technical Programs</a>
-        <!-- <a href="/gallery.html" class="text-white hover:text-orange-400 transition">Gallery</a> -->
         <a href="/registration.html" class="text-white hover:text-orange-400 transition">Registration</a>
 
         <!-- Committee Dropdown -->
         <div class="relative">
-          <button onclick="toggleDropdown('committeeDropdown')" class="text-white hover:text-orange-400 transition flex items-center">
-            Committee <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
+          <button onclick="toggleDropdown('committeeDropdown')" class="text-white hover:text-orange-400 flex items-center">
+            Committee
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
           </button>
           <div id="committeeDropdown" class="absolute mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
             <a href="/scientific-committee.html" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Scientific Committee</a>
@@ -85,7 +89,7 @@
 
     <!-- Mobile Hamburger -->
     <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-white hover:bg-orange-400">
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="4" x2="20" y1="12" y2="12"/>
         <line x1="4" x2="20" y1="6" y2="6"/>
         <line x1="4" x2="20" y1="18" y2="18"/>
@@ -94,12 +98,11 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="md:hidden hidden bg-black/50 text-white px-6 py-4 space-y-4">
+  <div id="mobileMenu" class="md:hidden hidden bg-black/70 text-white px-6 py-4 space-y-4">
     <a href="/index.html" class="block hover:text-orange-400">Home</a>
     <a href="/CallPapers.html" class="block hover:text-orange-400">Call for Papers</a>
     <a href="/PaperSubmit.html" class="block hover:text-orange-400">Paper Submission</a>
     <a href="/technical-programs.html" class="block hover:text-orange-400">Technical Programs</a>
-    <!-- <a href="#" class="block hover:text-orange-400">Gallery</a> -->
     <a href="/registration.html" class="block hover:text-orange-400">Registration</a>
     <a href="/scientific-committee.html" class="block hover:text-orange-400">Scientific Committee</a>
     <a href="/AdvisoryCommittee.html" class="block hover:text-orange-400">Advisory Committee</a>
@@ -291,9 +294,12 @@
     </div>
 </footer>
     </div>
-<script src="/script.js"></script>
+    <script src="/script.js"></script>
     <script>
-        AOS.init()
+  AOS.init()
+ lucide.createIcons();
+</script>
+    <script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
@@ -314,7 +320,4 @@
         });
     </script>
 </body>
-<script>
-  AOS.init()
-</script>
 </html>
