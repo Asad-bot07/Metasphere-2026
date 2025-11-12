@@ -189,29 +189,40 @@ function setupVideoSlideshow(containerId) {
 setupCarousel("heritage-carousel");
 setupBackgroundSlideshow("background-slideshow");
 setupVideoSlideshow("video-slideshow");
-const devCards = document.querySelectorAll('.relative');
+const devCards = document.querySelectorAll(".relative");
 
-    devCards.forEach((card) => {
-      const img = card.querySelector('img');
-      const popup = card.querySelector('div[id^="popup"]');
+devCards.forEach((card) => {
+  const img = card.querySelector("img");
+  const popup = card.querySelector('div[id^="popup"]');
 
-      // Show popup on hover
-      card.addEventListener('mouseenter', () => {
-        popup.classList.remove('opacity-0', 'pointer-events-none');
-        popup.classList.add('opacity-100');
-        img.classList.add('scale-105');
-      });
+  // Show popup on hover
+  card.addEventListener("mouseenter", () => {
+    popup.classList.remove("opacity-0", "pointer-events-none");
+    popup.classList.add("opacity-100");
+    img.classList.add("scale-105");
+  });
 
-      // Hide popup when mouse leaves
-      card.addEventListener('mouseleave', () => {
-        popup.classList.add('opacity-0', 'pointer-events-none');
-        popup.classList.remove('opacity-100');
-        img.classList.remove('scale-105');
-      });
+  // Hide popup when mouse leaves
+  card.addEventListener("mouseleave", () => {
+    popup.classList.add("opacity-0", "pointer-events-none");
+    popup.classList.remove("opacity-100");
+    img.classList.remove("scale-105");
+  });
 
-      // Optional: toggle popup on click for mobile
-      card.addEventListener('click', () => {
-        popup.classList.toggle('opacity-100');
-        popup.classList.toggle('opacity-0');
-      });
-    });
+  // $(document).ready(function () {
+  //   $("#committeeTable").DataTable({
+  //     pageLength: 10,
+  //     responsive: true,
+  //     language: {
+  //       search: "Filter members:",
+  //       lengthMenu: "Show _MENU_ entries",
+  //     },
+  //   });
+  // });
+
+  // Optional: toggle popup on click for mobile
+  card.addEventListener("click", () => {
+    popup.classList.toggle("opacity-100");
+    popup.classList.toggle("opacity-0");
+  });
+});
